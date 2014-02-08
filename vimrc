@@ -78,8 +78,8 @@ set completeopt=longest,menuone
 " Force 256 colors display "
 set t_Co=256
 
-" Use the hybrid-light colorscheme "
-colorscheme hybrid-light
+" Use the hybrid dark colorscheme "
+colorscheme hybrid
 
 " Use the latex filetype for every kind of tex file "
 let g:tex_flavor = "latex"
