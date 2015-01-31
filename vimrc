@@ -94,3 +94,15 @@ let g:UltiSnipsSnippetDirectories=["mySnippets", "bundle/vim-snippets/UltiSnips"
 " Set slime to use tmux "
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
+
+" Function to detect a template file inside a Django project
+function! DjangoDetect()
+  let b:file = findfile("manage.py", ".;")
+  if !empty(b:file)
+    set filetype=htmldjango
+  else
+    set filetype=html
+  endif
+endfunction
+
+autocmd BufNewFile,BufRead *.html call DjangoDetect()
