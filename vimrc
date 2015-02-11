@@ -37,6 +37,9 @@ set wildmenu
 " Always use utf-8
 set encoding=utf-8
 
+" Disable the error bell
+set noeb vb t_vb=
+
 " Always keep a line between cursor and status line while scrolling down "
 if !&scrolloff
   set scrolloff=1
