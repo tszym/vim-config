@@ -84,12 +84,32 @@ set t_Co=256
 " Use the hybrid dark colorscheme "
 colorscheme hybrid
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug '~/.vim/bundle/matchit'
+Plug '~/.vim/bundle/nerdcommenter'
+Plug '~/.vim/bundle/netrw.vim'
+Plug '~/.vim/bundle/plantuml-syntax'
+Plug '~/.vim/bundle/supertab'
+Plug '~/.vim/bundle/syntastic'
+Plug '~/.vim/bundle/twig'
+Plug '~/.vim/bundle/ultisnips'
+Plug '~/.vim/bundle/vim-fugitive'
+Plug '~/.vim/bundle/vim-gradle'
+Plug '~/.vim/bundle/vim-scala'
+Plug '~/.vim/bundle/vim-slime'
+Plug '~/.vim/bundle/vim-snippets'
+Plug '~/.vim/bundle/vim-surround'
+Plug '~/.vim/bundle/vim-vinegar'
+call plug#end()
+
 " Use the latex filetype for every kind of tex file "
 let g:tex_flavor = "latex"
-
-" Start pathogen to load plugins "
-execute pathogen#infect()
-execute pathogen#helptags()
 
 " Give ultisnips extra-snipper folder "
 let g:UltiSnipsSnippetDirectories=["mySnippets", "bundle/vim-snippets/UltiSnips"]
