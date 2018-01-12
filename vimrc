@@ -91,28 +91,25 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug '~/.vim/bundle/matchit'
-Plug '~/.vim/bundle/nerdcommenter'
-Plug '~/.vim/bundle/netrw.vim'
-Plug '~/.vim/bundle/plantuml-syntax'
-Plug '~/.vim/bundle/supertab'
-Plug '~/.vim/bundle/syntastic'
-Plug '~/.vim/bundle/twig'
-Plug '~/.vim/bundle/ultisnips'
-Plug '~/.vim/bundle/vim-fugitive'
-Plug '~/.vim/bundle/vim-gradle'
-Plug '~/.vim/bundle/vim-scala'
-Plug '~/.vim/bundle/vim-slime'
-Plug '~/.vim/bundle/vim-snippets'
-Plug '~/.vim/bundle/vim-surround'
-Plug '~/.vim/bundle/vim-vinegar'
+Plug 'scrooloose/nerdcommenter', { 'tag': '2.5.1' }
+Plug 'vim-scripts/netrw.vim'
+Plug 'ervandew/supertab'
+Plug 'vim-syntastic/syntastic'
+Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-fugitive'
+Plug 'tfnico/vim-gradle'
+Plug 'derekwyatt/vim-scala'
+Plug 'jpalardy/vim-slime'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 call plug#end()
 
 " Use the latex filetype for every kind of tex file "
 let g:tex_flavor = "latex"
 
 " Give ultisnips extra-snipper folder "
-let g:UltiSnipsSnippetDirectories=["mySnippets", "bundle/vim-snippets/UltiSnips"]
+let g:UltiSnipsSnippetDirectories=["mySnippets", "plugged/vim-snippets/UltiSnips"]
 
 " Set slime to use tmux "
 let g:slime_target = "tmux"
