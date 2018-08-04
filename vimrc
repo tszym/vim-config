@@ -91,6 +91,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter', { 'tag': '2.5.1' }
 Plug 'vim-scripts/netrw.vim'
 Plug 'ervandew/supertab'
