@@ -1,3 +1,6 @@
+"" For vim-terraform-completion
+set nocompatible
+
 " Syntax higlighting "
 syntax on
 
@@ -104,7 +107,37 @@ Plug 'jpalardy/vim-slime'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'hashivim/vim-terraform'
+Plug 'juliosueiras/vim-terraform-completion'
 call plug#end()
+
+"""""""""""""
+" Syntastic Config
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" (Optional)Remove Info(Preview) window
+set completeopt-=preview
+" (Optional)Hide Info(Preview) window after completions
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+"""""""""""""
+" vim-terraform-completion config
+
+" (Optional) Enable terraform plan to be include in filter
+let g:syntastic_terraform_tffilter_plan = 1
+" (Optional) Default: 0, enable(1)/disable(0) plugin's keymapping
+let g:terraform_completion_keys = 1
+" (Optional) Default: 1, enable(1)/disable(0) terraform module registry completion
+let g:terraform_registry_module_completion = 0
+
+"""""""""""""
+" vim-terraform config
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_remap_spacebar=1
 
 " Use the latex filetype for every kind of tex file "
 let g:tex_flavor = "latex"
