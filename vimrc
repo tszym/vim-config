@@ -84,6 +84,18 @@ set completeopt=longest,menuone
 " Force 256 colors display "
 set t_Co=256
 
+" vv to generate new vertical split
+nnoremap <silent> vv <C-w>v
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+
 " Use the hybrid dark colorscheme "
 colorscheme hybrid
 
