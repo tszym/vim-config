@@ -95,18 +95,18 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdcommenter', { 'tag': '2.5.1' }
-Plug 'vim-scripts/netrw.vim'
+"Plug 'scrooloose/nerdcommenter', { 'tag': '2.5.1' }
+"Plug 'vim-scripts/netrw.vim'
+"Plug 'tpope/vim-vinegar'
 Plug 'ervandew/supertab'
 Plug 'vim-syntastic/syntastic'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'tfnico/vim-gradle'
 Plug 'derekwyatt/vim-scala'
-Plug 'jpalardy/vim-slime'
-Plug 'honza/vim-snippets'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
+"Plug 'jpalardy/vim-slime'
+"Plug 'honza/vim-snippets'
+"Plug 'tpope/vim-surround'
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 call plug#end()
@@ -143,11 +143,11 @@ let g:terraform_remap_spacebar=1
 let g:tex_flavor = "latex"
 
 " Give ultisnips extra-snipper folder "
-let g:UltiSnipsSnippetDirectories=["mySnippets", "plugged/vim-snippets/UltiSnips"]
+"let g:UltiSnipsSnippetDirectories=["mySnippets", "plugged/vim-snippets/UltiSnips"]
 
 " Set slime to use tmux "
-let g:slime_target = "tmux"
-let g:slime_paste_file = tempname()
+"let g:slime_target = "tmux"
+"let g:slime_paste_file = tempname()
 
 " Function to detect a template file inside a Django project
 function! DjangoDetect()
