@@ -109,6 +109,8 @@ Plug 'derekwyatt/vim-scala'
 "Plug 'tpope/vim-surround'
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 call plug#end()
 
 """""""""""""
